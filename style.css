@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro&display=swap');
+/* font-family: 'Press Start 2P', cursive;
+font-family: 'Source Code Pro', monospace; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+/* General Styles */
+
+nav {
+    width: 80%;
+    min-height: 10vh;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+}
+
+.nav-links {
+    position: relative;
+    /* background-color: orange; */
+    padding: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 3rem;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.nav-links i {
+    color: #000000;
+    font-size: 1.6rem;
+    opacity: 0
+}
+
+.nav-link.active i{
+    opacity: 1
+}
+
+
+/* 
+
+Welcome Section
+
+*/
+
+#welcome {
+    width: 80%;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-img {
+    width: 50%;
+}
+
+.welcome-img img {
+    width: 100%;
+}
+
+
+.welcome-text {
+    width: 40%;
+    text-align: left;
+}
+
+.welcome-text h2{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.welcome-text p{
+    font-size: 2.3rem;
+}
+
+.welcome-text .nextSection {
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    background: transparent;
+    border: 2px solid black;
+    margin-top: 3rem;
+    text-decoration: none;
+    transition: box-shadow 1s;
+    color: #000000;
+}
+
+.welcome-text .nextSection:hover{
+    box-shadow: inset 400px 0 0 0px #000000;
+    transition: 1s;
+    color: #fff;
+}

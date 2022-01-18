@@ -45,14 +45,15 @@ nav {
     margin:auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: fixed;
     background-color: #FFDFAC;
     border-bottom: 2px solid #000000;
+    z-index: 99;
 }
 
 .navContainer {
-    width: 80%;
+    width: 70%;
     min-height: 10vh;
     margin:auto;
     display: flex;
@@ -95,6 +96,55 @@ nav ul li a {
 
 .nav-link.active i{
     opacity: 1
+}
+
+i.fa-hamburger {
+    font-size: 3rem;
+    display: none
+}
+
+#hamburgerMenu {
+    display: none;
+}
+
+@media screen and (max-width: 700px){
+    nav {
+        width: 100%;
+        min-height: 10%;
+        margin:auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #FFDFAC;
+        border-bottom: 2px solid #000000;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #logo {
+        
+        font-size: 2rem;
+    }
+    .navContainer {
+        width: 90%;
+        min-height: 100%;
+        margin:auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    i.fa-hamburger {
+        font-size: 3rem;
+        display: block;
+        cursor: pointer;
+        color: #000;
+    }
 }
 
 
@@ -158,6 +208,34 @@ Welcome Section
 }
 
 
+@media screen and (max-width: 700px) {
+    #welcome {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding-top: 30%;
+        margin-bottom: 5rem;
+    }
+
+    .welcome-img {
+        width: 50%;
+    }
+
+    .welcome-text {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .welcome-text h2 {
+        margin-top: 3rem;
+        font-size: 4rem;
+    }
+}
+
 /* 
 
 ABOUT SECTION
@@ -207,6 +285,44 @@ ABOUT SECTION
     transform: scale(0.8) translateX(-60%) translatey(10%);
     z-index: -1;
     opacity: 0.9;
+}
+
+@media screen and (max-width: 700px) {
+    #about {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .about-text h3 {
+        font-size: 4rem;
+    }
+
+    .about-img {
+        overflow: visible;
+        display: flex;
+    }
+
+    .about-img {
+        transform: scale(0.5);
+    }
+    
+    .about-img img:nth-child(1){
+        transform: scale(0.8) translateX(60%) translatey(10%);
+        z-index: -1;
+        opacity: 0.9;
+    }
+    
+    .about-img img:nth-child(3){
+        transform: scale(0.8) translateX(-60%) translatey(10%);
+        z-index: -1;
+        opacity: 0.9;
+    }
 }
 
 
@@ -263,7 +379,39 @@ Our chunks website
     font-size: 3rem;
 }
 
+@media screen and (max-width: 700px) {
 
+    #our-chunks {
+        width: 80%;
+        margin: auto;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .chunks-text h3{
+        font-size: 4rem;
+        font-family: 'Press Start 2P', cursive;
+        margin: 2rem 0;
+    }
+
+    .chunks {
+        flex-direction: column;
+    }
+
+    .chunk-item {
+        width: 100%;
+        height: 100%;
+    }
+
+    .chunk-item img {
+        width: 50%;
+        height: 50%;
+    }
+}
 
 
 
@@ -326,10 +474,10 @@ Contact
 */
 
 #contact {
-    width: 80%;
-    text-align: center;
+    width: 50%;
+    text-align: left;
     margin: auto;
-    padding: 3rem;
+    padding: 6rem;
 }
 
 .contact-text h3{
@@ -338,43 +486,55 @@ Contact
     margin: 4rem 0;
 }
 .contact-text p{
-    font-size: 2rem
+    font-size: 2rem;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    margin-top: 5rem;
+}
+
+form {
+    text-align: left;
 }
 
 #contact form input {
-    width: 50%;
+    width: 100%;
     display: block;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding: 1rem;
-    border: none;
+    border: 2px solid #000;
     background-color: transparent;
-    color: #000;text-align: center;
-    border-bottom: 2px solid #000;
+    color: #000;
+    text-align: center;
     font-size: 2rem;
     outline: none;
     border-left: 2px solid #000;
     border-right: 2px solid #000;
+    font-family: 'Source Code Pro', monospace;
+    text-align: left;
 }
 
 #contact textarea {
-    width: 50%;
+    width: 100%;
     display: block;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding: 1rem;
-    border: none;
+    border: 2px solid #000;
     background-color: transparent;
     color: #000;text-align: center;
-    border-bottom: 2px solid #000;
     font-size: 2rem;
     outline: none;
-    border-left: 2px solid #000;
-    border-right: 2px solid #000;
+    font-family: 'Source Code Pro', monospace;
+    text-align: left;
 }
+
 
 #contact button {
     cursor:pointer;
+    font-weight: bolder;
+    font-size: 2rem
 }
 
 /* 

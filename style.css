@@ -45,7 +45,7 @@ nav {
     margin:auto;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     position: fixed;
     background-color: #FFDFAC;
     border-bottom: 2px solid #000000;
@@ -110,7 +110,7 @@ i.fa-hamburger {
 @media screen and (max-width: 700px){
     nav {
         width: 100%;
-        min-height: 10%;
+        min-height: 7%;
         margin:auto;
         display: flex;
         align-items: center;
@@ -147,6 +147,13 @@ i.fa-hamburger {
     }
 }
 
+
+@media screen and (max-width: 700px) {
+    main {
+        text-align: center;
+        margin: auto;
+    }
+}
 
 /* 
 
@@ -234,6 +241,10 @@ Welcome Section
         margin-top: 3rem;
         font-size: 4rem;
     }
+}
+
+@media screen and (max-width: 3500px) {
+
 }
 
 /* 
@@ -325,6 +336,43 @@ ABOUT SECTION
     }
 }
 
+@media screen and (max-width: 380px) {
+    #about {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .about-text h3 {
+        font-size: 4rem;
+    }
+
+    .about-img {
+        overflow: visible;
+        display: flex;
+    }
+
+    .about-img {
+        transform: scale(0.4);
+    }
+    
+    .about-img img:nth-child(1){
+        transform: scale(0.8) translateX(60%) translatey(10%);
+        z-index: -1;
+        opacity: 0.9;
+    }
+    
+    .about-img img:nth-child(3){
+        transform: scale(0.8) translateX(-60%) translatey(10%);
+        z-index: -1;
+        opacity: 0.9;
+    }
+}
 
 /* 
 
@@ -390,6 +438,7 @@ Our chunks website
         align-items: center;
         justify-content: space-evenly;
         flex-direction: column;
+        margin-bottom: 5rem;
     }
 
     .chunks-text h3{
@@ -463,6 +512,38 @@ BUY SECTİON
     text-align: center;
 }
 
+
+@media screen and (max-width: 800px) {
+    #buy {
+        width: 90%;
+        margin: auto;
+        height: 70vh;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    
+    .buy-chunk-item {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .buy-chunk-item img {
+        border-radius: 2rem;
+        width: 90%;
+        margin-bottom: 3rem;
+    }
+    
+    .buy-desc {
+        width: 100%;
+        text-align: center;
+    }
+}
 /*
 
 
@@ -537,6 +618,72 @@ form {
     font-size: 2rem
 }
 
+@media screen and (max-width: 700px) {
+    #contact {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        padding: 6rem;
+    }
+    
+    .contact-text h3{
+        font-size: 3rem;
+        font-family: 'Press Start 2P', cursive;
+        margin: 4rem 0;
+    }
+    .contact-text p{
+        font-size: 2rem;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        margin-top: 5rem;
+    }
+    
+    form {
+        text-align: center;
+    }
+    
+    #contact form input {
+        width: 100%;
+        display: block;
+        margin: auto;
+        margin-top: 3rem;
+        padding: 1rem;
+        border: 2px solid #000;
+        background-color: transparent;
+        color: #000;
+        text-align: center;
+        font-size: 2rem;
+        outline: none;
+        border-left: 2px solid #000;
+        border-right: 2px solid #000;
+        font-family: 'Source Code Pro', monospace;
+        text-align: left;
+    }
+    
+    #contact textarea {
+        width: 100%;
+        display: block;
+        margin: auto;
+        margin-top: 3rem;
+        padding: 1rem;
+        border: 2px solid #000;
+        background-color: transparent;
+        color: #000;text-align: center;
+        font-size: 2rem;
+        outline: none;
+        font-family: 'Source Code Pro', monospace;
+        text-align: left;
+    }
+    
+    
+    #contact button {
+        cursor:pointer;
+        font-weight: bolder;
+        font-size: 2rem
+    }
+}
+
 /* 
 
 
@@ -582,3 +729,42 @@ footer {
     width: 60%;
 }
 
+@media screen and (max-width: 700px) {
+
+    footer {
+        width: 100%;
+        background-color:#000;
+    }
+    
+    .footerContainer {
+        width: 90%;
+        margin: auto;
+        padding: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .imgSide {
+        width: 40%;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .imgSide p {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .footerContainer img {
+        width: 100%;
+    }
+    
+    .footerLinks{
+        color: #fff;
+        font-size: 1rem;
+        width: 100%;
+    }
+}
